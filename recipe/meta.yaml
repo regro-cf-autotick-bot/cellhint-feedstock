@@ -1,5 +1,5 @@
 {% set name = "cellhint" %}
-{% set version = "0.1.1" %}
+{% set version = "1.0.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: f73d7c476732249383e69d0d977d7a574fd42ef2d126ea0e007913c09f993b1a
+  sha256: b9fca2227b20b8342b29fd80ad974c4791b1c0bea0549ddebbf7248cb75c7498
 
 build:
   number: 0
