@@ -10,25 +10,27 @@ source:
   sha256: b9fca2227b20b8342b29fd80ad974c4791b1c0bea0549ddebbf7248cb75c7498
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - leidenalg >=0.9.0
     - numpy >=1.19.0
     - openpyxl >=3.0.4
     - pandas >=1.0.5
-    - python >=3.6
+    - python >={{ python_min }}
     - scanpy >=1.7.0
     - scikit-learn >=0.24.1
     - python-annoy >=1.17.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - cellhint
 
